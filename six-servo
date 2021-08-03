@@ -1,0 +1,66 @@
+#include <Servo.h>
+
+Servo ser1;
+Servo ser2;
+Servo ser3;
+Servo ser4;
+Servo ser5;
+Servo ser6;
+
+int servpos=0;
+void setup()
+
+{
+  ser1.attach(4);
+  ser2.attach(5);
+  ser3.attach(6);
+  ser4.attach(11);
+  ser5.attach(12);
+  ser6.attach(13);
+}
+void loop(){
+for (servpos = 0; servpos <= 180; servpos ++) { // goes from 0 degrees to 180 degrees
+       ser1.write(servpos);     
+       ser2.write(servpos);
+       delay(15);                       
+
+}
+
+  
+
+  for (servpos = 180; servpos >= 0; servpos --) { // goes from 180 degrees to 0 degrees
+       ser1.write(servpos);     
+      ser2.write(servpos);
+      delay(15);                       
+
+  }
+     for (servpos = 0; servpos <= 270; servpos ++) { // goes from 0 degrees to 180 degrees
+       ser3.write(servpos);     
+       ser4.write(servpos);
+       delay(15);                       
+
+}
+
+  
+
+  for (servpos = 270; servpos >= 0; servpos --) { // goes from 180 degrees to 0 degrees
+      ser3.write(servpos);     
+       ser4.write(servpos);
+       delay(15);                      
+
+  }
+ for (servpos = 0; servpos <= 90; servpos ++) { // goes from 0 degrees to 180 degrees
+       ser5.write(servpos);     
+       ser6.write(servpos);
+       delay(15);                       
+
+}
+
+  
+
+  for (servpos = 90; servpos >= 0; servpos --) { // goes from 180 degrees to 0 degrees
+       ser5.write(servpos);     
+       ser6.write(servpos);
+       delay(15);                      
+  }
+}
